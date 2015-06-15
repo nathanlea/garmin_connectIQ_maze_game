@@ -13,16 +13,7 @@ class TheMazeGameApp extends App.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() {
-        return [ new TheMazeGameView(), new TheMazeGameDelegate() ];
-    }
-
-}
-
-class TheMazeGameDelegate extends Ui.BehaviorDelegate {
-
-    function onMenu() {
-        Ui.pushView(new Rez.Menus.MainMenu(), new TheMazeGameMenuDelegate(), Ui.SLIDE_UP);
-        return true;
+        return [ new TheMazeGameView(), new BaseInputDelegate() ];
     }
 
 }
